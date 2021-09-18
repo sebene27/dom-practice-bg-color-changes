@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<!-- ??????????????????????????????????? -->
+
+<body>
+    <h1>Welcome</h1>
+    <button>click me to change the bg color"</button>
+
+    <script>
+        const h1 = document.querySelector('h1')
+        const button = document.querySelector('button')
+
+        button.addEventListener('click', function () {
+
+            const newColor = changeColor();
+            document.body.style.backgroundColor = newColor;
+            h1.innerText = newColor;
+        })
+        const changeColor = () => {
+            var r = Math.floor(Math.random() * 255);
+            var g = Math.floor(Math.random() * 255);
+            var b = Math.floor(Math.random() * 255);
+            return 'rgb(${r},${g},${b})';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        input[required] {
+            background-color: rgb(245, 184, 184);
+        }
+    </style>
+
+
+    <input id="LastName" name="LastName" type="text" placeholder="Last Name" required />
+
+
+    <input id="submit_button" type="submit">
+
+    <script>
+        var submit_button = document.getElementById("submit_button");
+
+        submit_button.addEventListener("click", function (e) {
+            var required = document.querySelectorAll("input[required]");
+
+            required.forEach(function (element) {
+                if (element.value.trim() == "") {
+                    element.style.backgroundColor = "red";
+                } else {
+                    element.style.backgroundColor = "white";
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

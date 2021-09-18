@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg color change</title>
+</head>
+
+<body>
+    <h1>Use Text box to change the bg color of the page</h1>
+    <input type="text" id="colorInputAsText">
+    <input type="color" id="colorInputColor">
+    <input type="button" id="colorButton" value="click me to change bg color" onclick="changeColor()">
+    <!-- or -->
+
+    <script>
+        function changeColor() {
+            // let color = document.getElementById('colorInputAsText').value;
+            let color = document.getElementById('colorInputColor').value;
+            document.body.style.backgroundColor = color
+        }
+    </script>
+
+
+</body>
+
+</html>

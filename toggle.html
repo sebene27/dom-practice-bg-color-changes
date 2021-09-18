@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <style>
+        .ownStyle {
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 55px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Click the "Try it" button to add and remove the "ownStyle" </h2>
+
+    <button onclick="ownFunction()">Try it</button>
+
+    <div id="ownDIV">
+        Welcome 2 G4!!
+    </div>
+
+    <script>
+        function ownFunction() {
+            var element = document.querySelector("#ownDIV");
+            element.classList.toggle("ownStyle");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .normal {
+            background-color: white;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .green {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style=text-align:center>Changing the bg color</h1>
+    <h3 style=text-align:center>using radio buttons</h3>
+    <div style=text-align:center>
+        <input class="colGreen" type="radio" name="colors" value="Green"><label>green</label>
+        <input class="colBlue" type="radio" name="colors" value="Blue"><label>blue</label>
+        <input class="colRed" type="radio" name="colors" value="Red"><label>red</label>
+        <input class="colYellow" type="radio" name="colors" value="Yellow"><label>yelw</label>
+    </div>
+    <script>
+        var bgColors = {
+
+            "Green": "green",
+            "Blue": "blue",
+            "Red": "red",
+            "Yellow": "yelw",
+            "Yelw": "yellow"
+        }
+        window.onload = function () {
+            var bgCol = document.getElementsByName('colors')
+            for (var i = 0; i < bgCol.length; i++) {
+                bgCol[i].onclick = function () {
+                    document.body.style.backgroundColor = bgColors[this.value];
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
